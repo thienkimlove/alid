@@ -45,20 +45,38 @@ class Category extends Model implements SluggableInterface
         return $this->hasMany('App\Category', 'parent_id', 'id');
 
     }
-    
+
     public function getListPostsAttribute()
     {
-        return Post::where('category_id', $this->id)->where('status', true)->orderBy('updated_at', 'desc')->limit(6)->get();
+        if ($this->subCategories->count() == 0) {
+            return Post::where('category_id', $this->id)->where('status', true)->orderBy('updated_at', 'desc')->limit(6)->get();
+        } else {
+            $categoryIds = $this->subCategories->lists('id')->all();
+            $categoryIds[] = $this->id;
+            return Post::whereIn('category_id', $categoryIds)->where('status', true)->orderBy('updated_at', 'desc')->limit(6)->get();
+        }
     }
-    
+
     public function posts()
     {
-      return $this->hasMany(Post::class)->where('status', true)->orderBy('updated_at', 'desc');
+        if ($this->subCategories->count() == 0) {
+            return Post::where('category_id', $this->id)->where('status', true)->orderBy('updated_at', 'desc')->get();
+        } else {
+            $categoryIds = $this->subCategories->lists('id')->all();
+            $categoryIds[] = $this->id;
+            return Post::whereIn('category_id', $categoryIds)->where('status', true)->orderBy('updated_at', 'desc')->get();
+        }
     }
 
     public function indexPosts()
     {
-        return Post::where('category_id', $this->id)->where('status', true)->orderBy('updated_at', 'desc')->limit(3)->get();
+        if ($this->subCategories->count() == 0) {
+            return Post::where('category_id', $this->id)->where('status', true)->orderBy('updated_at', 'desc')->limit(3)->get();
+        } else {
+            $categoryIds = $this->subCategories->lists('id')->all();
+            $categoryIds[] = $this->id;
+            return Post::whereIn('category_id', $categoryIds)->where('status', true)->orderBy('updated_at', 'desc')->limit(3)->get();
+        }
     }
   
 }
