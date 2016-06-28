@@ -21,8 +21,8 @@
                         </h3>
                         <p>
                             Độc giả có thể gửi câu hỏi trực tiếp vào bảng đặt câu hỏi dưới đây, hoặc gửi trực tiếp vào Email:
-                            <a href="mailto:tuvansuckhoe.bsdinh@gmail.com">tuvansuckhoe.bsdinh@gmail.com</a>
-                            <a href="mailto:tuvanbigbb@gmail.com">tuvanbigbb@gmail.com</a>
+                            <a href="mailto:contact@tuelinh.com">contact@tuelinh.com</a>
+                            <a href="mailto:contact@tuelinh.com">contact@tuelinh.com</a>
                         </p>
                     </div>
                     <!-- //listQuestion -->

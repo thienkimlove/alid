@@ -816,7 +816,7 @@ section, header, footer {
   float: left;
   width: 50%;
 }
-.boxPromo .col .col-01 p {
+.boxPromo .col .col-01 p, .boxPromo .col .col-01 h3 {
   width: 260px;
 }
 .boxPromo .col .col-02 {
@@ -824,7 +824,7 @@ section, header, footer {
   width: 50%;
   text-align: right;
 }
-.boxPromo .col .col-02 p {
+.boxPromo .col .col-02 p, .boxPromo .col .col-02 h3 {
   float: right;
   width: 260px;
 }
