@@ -40,7 +40,7 @@ class ViewComposerProvider extends ServiceProvider
         });
 
         view()->composer('frontend.mobile_menu', function ($view) {
-            $headerIndexBanners = Banner::where('status', true)->where('position', 'header_index')->get();
+            $headerIndexBanners = Banner::where('status', true)->where('position', 'header')->get();
             $view->with('headerCategories',  Category::whereNull('parent_id')->get());
             $view->with('headerIndexBanners',  $headerIndexBanners);
             
