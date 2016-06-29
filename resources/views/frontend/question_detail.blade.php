@@ -27,7 +27,6 @@
                     </div>
                     <!-- //listQuestion -->
                     <article class="item">
-                        <h3 class="title-faq"><span>{{$mainQuestion->title}}</span></h3>
                         <div class="content">
                             <p>
                                 <span class="question">Câu hỏi:</span>
