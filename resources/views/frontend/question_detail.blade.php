@@ -27,7 +27,7 @@
                     </div>
                     <!-- //listQuestion -->
                     <article class="item">
-                        <h3 class="title-faq"><span>?</span>{{$mainQuestion->title}}</h3>
+                        <h3 class="title-faq"><span>{{$mainQuestion->title}}</span></h3>
                         <div class="content">
                             <p>
                                 <span class="question">Câu hỏi:</span>
@@ -43,9 +43,10 @@
                                   <span>
                                     {{$mainQuestion->updated_at->format('H:i:s')}}
                                   </span>
+                                 </div>
                             </div>
                             <p>
-                            <h3 class="title-faq">Trả lời</h3>
+                                <h3 class="title-faq">Trả lời</h3>
                                 <span>
                                  {!! $mainQuestion->answer !!}
                                 </span>
