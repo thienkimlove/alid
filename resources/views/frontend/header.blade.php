@@ -36,7 +36,7 @@
                         <li>
                             <a class="{{(isset($page) && ($page == $headerCategory->slug || in_array($page, $headerCategory->subCategories->lists('slug')->all()))) ? 'active' : ''}}" href="{{url($headerCategory->slug)}}">{{$headerCategory->name}}</a>
                             @if ($headerCategory->subCategories->count() > 0)
-                                <ul>
+                                <ul class="hasSub">
                                     @foreach ($headerCategory->subCategories as $childCategory)
                                         <li><a class="{{(isset($page) && $page == $childCategory->slug) ? 'active' : ''}}" href="{{url($childCategory->slug)}}">{{$childCategory->name}}</a></li>
                                     @endforeach
