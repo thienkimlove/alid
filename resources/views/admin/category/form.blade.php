@@ -42,7 +42,7 @@
                 {!! Form::select('parent_id', $parents, null, ['class' => 'form-control']) !!}
             </div>
 
-            @if ($category->id && !$category->parent_id)
+            @if ($category->id)
                     <div class="form-group">
                         {!! Form::label('index_display', 'Index Display') !!}
                         {!! Form::text('index_display', null, ['class' => 'form-control']) !!}
