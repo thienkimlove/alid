@@ -15,7 +15,9 @@
                    <div class="boxDetail">
                     <div class="topNews">
                         <p>
-                           <a href="{{url($firstPost->slug.'.html')}}"> <img src="{{url('img/cache/714x492', $firstPost->image)}}" alt="">
+                           <a href="{{url($firstPost->slug.'.html')}}">
+                               <img src="{{url('img/cache/680x280', $firstPost->image)}}" alt="" />
+                           </a>
                         </p>
                         <h2 class="titlePost">
                           <a href="{{url($firstPost->slug.'.html')}}"> {{$firstPost->title}}</a>
