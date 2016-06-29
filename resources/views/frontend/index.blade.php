@@ -35,7 +35,7 @@
                 </ul>
                 @foreach ($categories as $k => $category)
                    <article class="tabContent clearFix" id="tab0{{$k + 1}}">
-                    @foreach ($category->indexPosts as $indexPost)
+                    @foreach ($category->indexPosts() as $indexPost)
                     <div class="item clearFix">
                         <a href="{{url($indexPost->slug . '.html')}}" class="thumb">
                             <img src="{{url('img/cache/320x225', $indexPost->image)}}" alt="{{$indexPost->title}}" width="320" height="225">
