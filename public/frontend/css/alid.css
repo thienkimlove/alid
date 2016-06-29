@@ -809,7 +809,7 @@ section, header, footer {
 .boxPromo .col {
   position: absolute;
   top: 0;
-  padding-top: 150px;
+  padding-top: 85px;
   width: 100%;
 }
 .boxPromo .col .col-01 {
@@ -1022,7 +1022,7 @@ section, header, footer {
   margin: -14px 0 0 -14px;
 }
 .boxMedia .item h3 {
-  min-height: 45px;
+  min-height: 50px;
 }
 .boxMedia .item h3 a {
   color: #666;
