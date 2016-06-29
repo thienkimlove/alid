@@ -26,8 +26,6 @@ class ProductRequest extends Request
         return [
             'title' => 'required',   
             'content_tab1' => 'required',
-            'content_tab2' => 'required',
-            'content_tab3' => 'required',
             'tag_list' => 'required'
         ];
     }
