@@ -125,29 +125,19 @@ class FrontendController extends Controller
     {
         $page = 'index';
 
-        $promoCategory = Category::where('index_display', 1)->get();
-        
-        if ($promoCategory->count() > 0) {
-            $promoCategory = $promoCategory->first();
-        } else {
-            $promoCategory = null;
-        }
-        
         $promos = null;
-        
-        if ($promoCategory) {
-            $promos =  Post::where('category_id', $promoCategory->id)
-                ->where('status', true)
-                ->latest('updated_at')
-                ->limit(4)
-                ->get();
-        }
+
+        $promos =  Post::where('index_slide', true)
+            ->where('status', true)
+            ->latest('updated_at')
+            ->limit(4)
+            ->get();
 
 
-        $categories = Category::where('index_display', 2)->get();
+        $categories = Category::where('index_display', 1)->get();
 
       
-        $historyCategory = Category::where('index_display', 3)->get();
+        $historyCategory = Category::where('index_display', 2)->get();
 
         if ($historyCategory->count() > 0) {
             $historyCategory = $historyCategory->first();
