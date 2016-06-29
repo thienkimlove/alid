@@ -314,7 +314,7 @@ class FrontendController extends Controller
                 'desc' => $meta_desc,
                 'keywords' => $meta_keywords,
             ], $mainQuestion));
-
+            
         } else {
             $questions = Question::publish()->paginate(10);
             return view('frontend.question', compact('questions', 'mainQuestion', 'middleIndexBanner', 'page'))->with($this->generateMeta('cau-hoi-thuong-gap', [
@@ -322,7 +322,7 @@ class FrontendController extends Controller
                 'desc' => $meta_desc,
                 'keywords' => $meta_keywords,
             ], $mainQuestion));
-        }
+        }       
     }
 
     public function main($value)
@@ -352,21 +352,10 @@ class FrontendController extends Controller
         } else {
             $category = Category::where('slug', $value)->first();
 
-            if ($category->subCategories->count() == 0) {
-                //child categories
-                $posts = Post::publish()
-                    ->where('category_id', $category->id)
-                    ->latest('updated_at')
-                    ->paginate(10);
-
-            } else {
-                //parent categories
-                $posts = Post::publish()
-                    ->whereIn('category_id', $category->subCategories->lists('id')->all())
-                    ->latest('updated_at')
-                    ->paginate(10);
-
-            }
+            $posts = Post::publish()
+                ->where('category_id', $category->id)
+                ->latest('updated_at')
+                ->paginate(10);
             
             $page = $category->slug;
 

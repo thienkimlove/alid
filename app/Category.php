@@ -48,31 +48,17 @@ class Category extends Model implements SluggableInterface
     
     public function getListPostsAttribute()
     {
-        if ($this->subCategories->count() == 0) {
-            return Post::where('category_id', $this->id)->where('status', true)->orderBy('updated_at', 'desc')->limit(6)->get();
-        } else {
-            $categoryIds = $this->subCategories->lists('id')->all();
-            $categoryIds[] = $this->id;
-            return Post::whereIn('category_id', $categoryIds)->where('status', true)->orderBy('updated_at', 'desc')->limit(6)->get();
-        }
+        return Post::where('category_id', $this->id)->where('status', true)->orderBy('updated_at', 'desc')->limit(6)->get();
     }
     
     public function posts()
     {
-
       return $this->hasMany(Post::class)->where('status', true)->orderBy('updated_at', 'desc');
-
     }
 
     public function indexPosts()
     {
-        if ($this->subCategories->count() == 0) {
-            return Post::where('category_id', $this->id)->where('status', true)->orderBy('updated_at', 'desc')->limit(3)->get();
-        } else {
-            $categoryIds = $this->subCategories->lists('id')->all();
-            $categoryIds[] = $this->id;
-            return Post::whereIn('category_id', $categoryIds)->where('status', true)->orderBy('updated_at', 'desc')->limit(3)->get();
-        }
+        return Post::where('category_id', $this->id)->where('status', true)->orderBy('updated_at', 'desc')->limit(3)->get();
     }
   
 }
