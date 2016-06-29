@@ -60,13 +60,7 @@ class Category extends Model implements SluggableInterface
     public function posts()
     {
 
-        if ($this->subCategories->count() == 0) {
-            return Post::where('category_id', $this->id)->where('status', true)->orderBy('updated_at', 'desc')->get();
-        } else {
-            $categoryIds = $this->subCategories->lists('id')->all();
-            $categoryIds[] = $this->id;
-            return Post::whereIn('category_id', $categoryIds)->where('status', true)->orderBy('updated_at', 'desc')->get();
-        }
+      return $this->hasMany(Post::class)->where('status', true)->orderBy('updated_at', 'desc');
 
     }
 
