@@ -58,9 +58,9 @@
 </script>
 @include('frontend.header')
 @yield('content')
-@include('frontend.footer')
+{{--@include('frontend.footer')
 <div class="overlay" id="overlay"></div>
-@include('frontend.mobile_menu')
+@include('frontend.mobile_menu')--}}
 <script type="text/javascript" src="{{url('frontend/js/jquery-1.10.2.min.js')}}"></script>
 <script type="text/javascript" src="{{url('frontend/js/jquery.matchHeight-min.js')}}"></script>
 <script type="text/javascript" src="{{url('frontend/js/jquery.responsiveTabs.min.js')}}"></script>
