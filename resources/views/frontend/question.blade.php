@@ -12,22 +12,6 @@
                     <h3 class="globalTitle">
                         <a href="{{url('cau-hoi-thuong-gap')}}">Góc chuyên gia</a>
                     </h3>
-                    @if ($mainQuestion)
-                        <div class="headQuestion clearFix">
-                            <a href="{{url('cau-hoi-thuong-gap', $mainQuestion->slug)}}" class="thumb">
-                                <img src="{{url('img/cache/200x200', $mainQuestion->image)}}" alt="">
-                            </a>
-                            <h3>
-                                {{$mainQuestion->question}}
-                            </h3>
-                            {{$mainQuestion->answer}}
-                            <p>
-                                Độc giả có thể gửi câu hỏi trực tiếp vào bảng đặt câu hỏi dưới đây, hoặc gửi trực tiếp vào Email:
-                                <a href="mailto:tuvansuckhoe.bsdinh@gmail.com">tuvansuckhoe.bsdinh@gmail.com</a>
-                                <a href="mailto:tuvanbigbb@gmail.com">tuvanbigbb@gmail.com</a>
-                            </p>
-                        </div>
-                    @endif
                     <div class="boxForm">
                         {!! Form::open(array('url' => 'save_question')) !!}
                             <input type="text" name="ask_person" class="txt txt-name" placeholder="Họ và tên"/>

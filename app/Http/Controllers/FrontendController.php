@@ -308,13 +308,21 @@ class FrontendController extends Controller
             $meta_title = ($mainQuestion->seo_title) ? $mainQuestion->seo_title : $mainQuestion->title;
             $meta_desc = $mainQuestion->desc;
             $meta_keywords = $mainQuestion->keywords;
+
+            return view('frontend.question_detail', compact('mainQuestion', 'middleIndexBanner', 'page'))->with($this->generateMeta('cau-hoi-thuong-gap', [
+                'title' => $meta_title,
+                'desc' => $meta_desc,
+                'keywords' => $meta_keywords,
+            ], $mainQuestion));
+
+        } else {
+            $questions = Question::publish()->paginate(10);
+            return view('frontend.question', compact('questions', 'mainQuestion', 'middleIndexBanner', 'page'))->with($this->generateMeta('cau-hoi-thuong-gap', [
+                'title' => $meta_title,
+                'desc' => $meta_desc,
+                'keywords' => $meta_keywords,
+            ], $mainQuestion));
         }
-        $questions = Question::publish()->paginate(10);
-        return view('frontend.question', compact('questions', 'mainQuestion', 'middleIndexBanner', 'page'))->with($this->generateMeta('cau-hoi-thuong-gap', [
-            'title' => $meta_title,
-            'desc' => $meta_desc,
-            'keywords' => $meta_keywords,
-        ], $mainQuestion));
     }
 
     public function main($value)
