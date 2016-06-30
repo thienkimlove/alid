@@ -36,7 +36,7 @@
                                 <th>Category</th>
                                 <th>Desc</th>
                                 <th>Image</th>
-                                <th>Index Slider</th>
+                                <th>Index Promo</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
