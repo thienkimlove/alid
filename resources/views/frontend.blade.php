@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'/>
@@ -15,14 +15,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{$meta_url}}">
     <meta property="og:image" content="{{$meta_image}}">
-    <meta property="og:site_name" content="Thông huyết">
+    <meta property="og:site_name" content="Alidslim">
+	<meta property="fb:app_id" content="1565586193743263" />
 
     <meta name="twitter:card" content="Card">
     <meta name="twitter:url" content="{{$meta_url}}">
     <meta name="twitter:title" content="{{$meta_title}}">
     <meta name="twitter:description" content="{{$meta_desc}}">
     <meta name="twitter:image" content="{{$meta_image}}">
-    <meta property="fb:app_id" content="1565586193743263" />
 
     <meta itemprop="name" content="{{$meta_title}}">
     <meta itemprop="description" content="{{$meta_desc}}">
@@ -46,9 +46,8 @@
     <![endif]-->
     <script src="{{url('frontend/js/modernizr.js')}}" type="text/javascript"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-570f69bb385fe2f2"></script>
-</head>
-<body>
-<div id="fb-root"></div>
+	
+	<div id="fb-root"></div>
 <script>
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -57,6 +56,26 @@
         js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.6&appId=1565586193743263";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
+</script>
+
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1565586193743263',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 </script>
 @include('frontend.header')
 @yield('content')
