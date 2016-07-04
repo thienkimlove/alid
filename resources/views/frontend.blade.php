@@ -58,6 +58,7 @@
 </script>
 @include('frontend.header')
 @yield('content')
+@include('frontend.footer')
 {{--@include('frontend.footer')
 <div class="overlay" id="overlay"></div>
 @include('frontend.mobile_menu')--}}
