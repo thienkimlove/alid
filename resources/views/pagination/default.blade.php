@@ -13,36 +13,3 @@
             </li>
         </ul>
 @endif
-
-<div class="boxPaging">
-    <ul class="navPaging">
-        <li>
-            <a href="" title="">««</a>
-        </li>
-        <li>
-            <a href="" title="">«</a>
-        </li>
-        <li>
-            <a class="current" href="" title="">1</a>
-        </li>
-        <li>
-            <a href="" title="">2</a>
-        </li>
-        <li>
-            <a href="" title="">3</a>
-        </li>
-        <li>
-            <a href="" title="">4</a>
-        </li>
-        <li>
-            <a href="" title="">5</a>
-        </li>
-        <li>
-            <a href="" title="">»</a>
-        </li>
-        <li>
-            <a href="" title="">»»</a>
-        </li>
-    </ul>
-    <div class="clear"></div>
-</div>
