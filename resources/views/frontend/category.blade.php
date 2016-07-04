@@ -38,7 +38,6 @@
                 </div>
                 @endif
                 @if ($posts->count() > 0)
-                    @foreach ($posts as $post)
                         <div class="boxNews">
                             <div class="listNews">
                                 @foreach ($posts as $post)
@@ -67,7 +66,6 @@
                                 @endforeach
                             </div>
                         </div>
-                    @endforeach
                 @endif
 
                 <div class="boxPaging">
