@@ -12,7 +12,7 @@
                 <div class="col-0{{$k+1}}">
                     @foreach ($promoContents as $promoContent)
                         <div class="block0{{$k+1}} clearFix">
-                        <h3>{{$promoContent->title}}</h3>
+                        <h3><a href="{{url($promoContent->slug.'.html')}}">{{$promoContent->title}}</a></h3>
                         <p>
                            {{$promoContent->desc}}
                         </p>
