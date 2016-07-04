@@ -70,7 +70,7 @@
                                         <img src="{{url('img/cache/340x225', $historyContent->image)}}" alt="History" width="340" height="225">
                                     </a>
                                     <h3>
-                                        <a href="{{url($historyContent . '.html')}}">
+                                        <a href="{{url($historyContent->slug . '.html')}}">
                                             {{$historyContent->title}}
                                         </a>
                                     </h3>
