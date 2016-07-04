@@ -352,10 +352,21 @@ class FrontendController extends Controller
         } else {
             $category = Category::where('slug', $value)->first();
 
-            $posts = Post::publish()
-                ->where('category_id', $category->id)
-                ->latest('updated_at')
-                ->paginate(10);
+            if ($category->subCategories->count() == 0) {
+                //child categories
+                $posts = Post::publish()
+                    ->where('category_id', $category->id)
+                    ->latest('updated_at')
+                    ->paginate(10);
+
+            } else {
+                //parent categories
+                $posts = Post::publish()
+                    ->whereIn('category_id', $category->subCategories->lists('id')->all())
+                    ->latest('updated_at')
+                    ->paginate(10);
+
+            }
             
             $page = $category->slug;
 
