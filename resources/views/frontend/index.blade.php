@@ -66,7 +66,7 @@
                             <div class="item">
                                 @foreach ($historyContents as $historyContent)
                                    <div class="block">
-                                    <a href="{{url($historyContent . '.html')}}" class="thumbHistory">
+                                    <a href="{{url($historyContent->slug . '.html')}}" class="thumbHistory">
                                         <img src="{{url('img/cache/340x225', $historyContent->image)}}" alt="History" width="340" height="225">
                                     </a>
                                     <h3>

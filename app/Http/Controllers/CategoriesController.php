@@ -74,9 +74,7 @@ class CategoriesController extends AdminController
             'parent_id' => ($request->input('parent_id') == 0) ? null : $request->input('parent_id'),
         ];
 
-        if ($request->input('index_display')) {
-            $data['index_display'] = (int) $request->input('index_display');
-        }
+        $data['index_display'] = $request->input('index_display') ? (int) $request->input('index_display') : 0;
 
         $category->update($data);
 
