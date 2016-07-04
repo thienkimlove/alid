@@ -127,11 +127,10 @@ class FrontendController extends Controller
 
         $promos = null;
 
-        $promos =  Post::where('index_slide', true)
-            ->where('status', true)
-            ->latest('updated_at')
-            ->limit(4)
-            ->get();
+        $settings = Setting::lists('value', 'name')->all();
+
+
+        $promos = isset($settings['INDEX_PROMO']) ? $settings['INDEX_PROMO'] : '';
 
 
         $categories = Category::where('index_display', 1)->get();
