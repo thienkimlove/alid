@@ -4,7 +4,23 @@
 
     <div class="boxPromo">
         <div class="container">
-           {!! $promos !!}
+            <div class="centerImg">
+                <img src="{{url('frontend/imgs/temp/promo.png')}}" alt="Promo">
+            </div>
+            <div class="col">
+                @foreach ($promos->chunk(2) as $k => $promoContents)
+                <div class="col-0{{$k+1}}">
+                    @foreach ($promoContents as $promoContent)
+                        <div class="block0{{$k+1}} clearFix">
+                        <h3>{{$promoContent->title}}</h3>
+                        <p>
+                           {{$promoContent->desc}}
+                        </p>
+                    </div>
+                    @endforeach
+                </div>
+                @endforeach
+            </div>
         </div>
     </div>
     <section class="boxTabs">
