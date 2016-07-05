@@ -52,7 +52,7 @@ class ViewComposerProvider extends ServiceProvider
 
         view()->composer('frontend.right_index', function ($view) {            
             
-            $view->with('featureVideos',  Video::latest('updated_at')->limit(2)->get());           
+            $view->with('featureVideos',  Video::latest('updated_at')->limit(3)->get());
         });
 
         view()->composer('frontend.right', function ($view) {

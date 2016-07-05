@@ -316,7 +316,7 @@ class FrontendController extends Controller
             ], $mainQuestion));
             
         } else {
-            $questions = Question::publish()->paginate(10);
+            $questions = Question::publish()->paginate(8);
             return view('frontend.question', compact('questions', 'mainQuestion', 'middleIndexBanner', 'page'))->with($this->generateMeta('cau-hoi-thuong-gap', [
                 'title' => $meta_title,
                 'desc' => $meta_desc,
@@ -357,14 +357,14 @@ class FrontendController extends Controller
                 $posts = Post::publish()
                     ->where('category_id', $category->id)
                     ->latest('updated_at')
-                    ->paginate(10);
+                    ->paginate(6);
 
             } else {
                 //parent categories
                 $posts = Post::publish()
                     ->whereIn('category_id', $category->subCategories->lists('id')->all())
                     ->latest('updated_at')
-                    ->paginate(10);
+                    ->paginate(6);
 
             }
             

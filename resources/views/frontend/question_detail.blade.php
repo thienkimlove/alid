@@ -17,7 +17,7 @@
                             <img src="{{url('img/cache/200x200', $mainQuestion->image)}}" alt="">
                         </a>
                         <h3>
-                            {{$mainQuestion->question}}
+                            {{$mainQuestion->title}}
                         </h3>
                         <p>
                             Độc giả có thể gửi câu hỏi trực tiếp vào bảng đặt câu hỏi dưới đây, hoặc gửi trực tiếp vào Email:

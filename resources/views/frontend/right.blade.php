@@ -9,7 +9,7 @@
             <img src="{{url('frontend/imgs/temp/dis.jpg')}}" alt="">
         </a>
     </div>
-    @if ($featureVideos->count() > 0)
+    @if ($featureVideos->count() > 0 && $page != 'video')
         <div class="boxVideo">
             <h3 class="globalTitle">
                 Góc Video
@@ -39,10 +39,10 @@
 
     <div class="boxSocial">
         <div class="Social">
-            <div class="fb-page" data-href="https://www.facebook.com/tuelinh.vn" data-width="100%" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/tuelinh.vn"><a href="https://www.facebook.com/tuelinh.vn">Tuệ Linh</a></blockquote></div></div>
+            <div class="fb-page" data-href="https://www.facebook.com/AlidSlim-Eo-thon-d%C3%A1ng-%C4%91%E1%BA%B9p-1025739557533863/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/AlidSlim-Eo-thon-d%C3%A1ng-%C4%91%E1%BA%B9p-1025739557533863/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AlidSlim-Eo-thon-d%C3%A1ng-%C4%91%E1%BA%B9p-1025739557533863/">AlidSlim - Eo thon, dáng ð?p</a></blockquote></div>
         </div>
     </div>
-    @if ($rightNews->count() > 0)
+    @if ($rightNews->count() > 0 && $page != 'phan-phoi')
         <div class="boxNews" id="sideBar">
             <h3 class="globalTitle">
                 Tin nổi bật
@@ -54,7 +54,7 @@
                         <img src="{{url('img/cache/105x62', $latestNew->image)}}" alt="">
                     </a>
                     <h3>
-                        <a href="{{url($latestNew->slug. '.html')}}">{{$latestNew->title}}</a>
+                        <a href="{{url($latestNew->slug. '.html')}}">{{str_limit($latestNew->title, 65)}}</a>
                     </h3>
                 </div>
                 @endforeach
