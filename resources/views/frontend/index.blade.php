@@ -41,7 +41,7 @@
                             <img src="{{url('img/cache/320x225', $indexPost->image)}}" alt="{{$indexPost->title}}" width="320" height="225">
                         </a>
                         <h3>
-                            {{$indexPost->title}}
+                           <a href="{{url($indexPost->slug . '.html')}}"> {{$indexPost->title}}</a>
                         </h3>
                         <p>
                            {{$indexPost->desc}}

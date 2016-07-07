@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="no-js" xmlns:fb='http://www.facebook.com/2008/fbml'>
 <head>
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'/>
@@ -15,7 +15,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{$meta_url}}">
     <meta property="og:image" content="{{$meta_image}}">
-    <meta property="og:site_name" content="Thông huyết">
+    <meta property="og:site_name" content="Alidslim">
 
     <meta name="twitter:card" content="Card">
     <meta name="twitter:url" content="{{$meta_url}}">
@@ -34,7 +34,7 @@
     <meta name="DESCRIPTION" content="{{$meta_desc}}"/>
     <meta name="KEYWORDS" content="{{$meta_keywords}}"/>
     <meta name="ROBOTS" content="index,follow"/>
-    <meta name="AUTHOR" content="Thông huyết"/>
+    <meta name="AUTHOR" content="Alidslim"/>
     <meta name="RESOURCE-TYPE" content="DOCUMENT"/>
     <meta name="DISTRIBUTION" content="GLOBAL"/>
     <meta name="COPYRIGHT" content="Copyright 2013 by Goethe"/>
