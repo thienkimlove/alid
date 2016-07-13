@@ -71,6 +71,11 @@
                     {!! Form::checkbox('index_slide', null, null) !!}
                 </div>
 
+                <div class="form-group">
+                    {!! Form::label('category_index', 'Hiển thị bài nổi bật của chuyên mục') !!}
+                    {!! Form::checkbox('category_index', null, null) !!}
+                </div>
+
 
             <div class="form-group">
                 {!! Form::label('status', 'Publish') !!}

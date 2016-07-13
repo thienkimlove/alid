@@ -169,7 +169,7 @@ class FrontendController extends Controller
         $page = 'video';
         $mainVideo = null;
         $meta_title = $meta_desc = $meta_keywords = null;
-        $videos = Video::paginate(6);
+        $videos = Video::paginate(12);
 
         $latestVideos = Video::latest('updated_at')->limit(5)->get();
 

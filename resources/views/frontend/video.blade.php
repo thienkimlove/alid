@@ -20,6 +20,8 @@
                         <iframe width="100%" height="315" src="{{$mainVideo->url}}" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
+
+                
                 @foreach ($videos as $video)
                     <article class="item">
                     <a class="thumb" href="{{url('video', $video->slug)}}" title="">

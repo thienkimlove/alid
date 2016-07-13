@@ -11,33 +11,35 @@
                     </li>
                     <li class="active">{{$category->name}}</li>
                 </ul>
-                @if ($firstPost = $posts->shift())
-                   <div class="boxDetail">
-                    <div class="topNews">
-                        <p>
-                           <a href="{{url($firstPost->slug.'.html')}}">
-                               <img src="{{url('img/cache/680x280', $firstPost->image)}}" alt="" />
-                           </a>
-                        </p>
-                        <h2 class="titlePost">
-                          <a href="{{url($firstPost->slug.'.html')}}"> {{$firstPost->title}}</a>
-                        </h2>
-                        <p>
-                          {{$firstPost->desc}}
-                        </p>
-                        <div class="viewDetail clearFix">
-                            <div class="date">
-                                <span class="datePost">
-                                  {{$firstPost->updated_at->format('d/m/Y')}}
-                                </span>
-                                <span>
-                                  {{$firstPost->views}} lượt xem
-                                </span>
+                @if ($category->first_post->count() > 0)
+                    @foreach ($category->first_post as $firstPost)
+                      <div class="boxDetail">
+                          <div class="topNews">
+                            <p>
+                               <a href="{{url($firstPost->slug.'.html')}}">
+                                   <img src="{{url('img/cache/680x280', $firstPost->image)}}" alt="" />
+                               </a>
+                            </p>
+                            <h2 class="titlePost">
+                              <a href="{{url($firstPost->slug.'.html')}}"> {{$firstPost->title}}</a>
+                            </h2>
+                            <p>
+                              {{$firstPost->desc}}
+                            </p>
+                            <div class="viewDetail clearFix">
+                                <div class="date">
+                                    <span class="datePost">
+                                      {{$firstPost->updated_at->format('d/m/Y')}}
+                                    </span>
+                                    <span>
+                                      {{$firstPost->views}} lượt xem
+                                    </span>
+                                </div>
+                                <a href="{{url($firstPost->slug.'.html')}}" class="viewMore">Xem thêm</a>
                             </div>
-                            <a href="{{url($firstPost->slug.'.html')}}" class="viewMore">Xem thêm</a>
                         </div>
-                    </div>
-                </div>
+                      </div>
+                    @endforeach
                 @endif
                 @if ($posts->count() > 0)
                         <div class="boxNews">

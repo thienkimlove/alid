@@ -37,6 +37,7 @@
                                 <th>Desc</th>
                                 <th>Image</th>
                                 <th>Index Promo</th>
+                                <th>Category Index</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -51,6 +52,7 @@
                                     <td>{!! str_limit($post->desc, 200) !!}</td>
                                     <td><img src="{{url('img/cache/120x120/' . $post->image)}}" /></td>
                                     <td>{{ ($post->index_slide) ? 'Yes' : 'No'  }}</td>
+                                    <td>{{ ($post->category_index) ? 'Yes' : 'No'  }}</td>
                                     <td>{{ ($post->status) ? 'Yes' : 'No'  }}</td>
                                     <td>
                                         <button id-attr="{{$post->id}}" class="btn btn-primary btn-sm edit-post" type="button">Edit</button>&nbsp;
