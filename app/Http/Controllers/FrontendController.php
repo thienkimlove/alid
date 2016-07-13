@@ -359,6 +359,13 @@ class FrontendController extends Controller
                     ->latest('updated_at')
                     ->paginate(6);
 
+                $firstPosts =  Post::publish()
+                    ->where('category_id', $category->id)
+                    ->where('category_index', true)
+                    ->latest('updated_at')
+                    ->limit(1)
+                    ->get();
+
             } else {
                 //parent categories
                 $posts = Post::publish()
@@ -366,12 +373,19 @@ class FrontendController extends Controller
                     ->latest('updated_at')
                     ->paginate(6);
 
+                $firstPosts =  Post::publish()
+                    ->where('category_id', $category->subCategories->lists('id')->all())
+                    ->where('category_index', true)
+                    ->latest('updated_at')
+                    ->limit(1)
+                    ->get();
+
             }
             
             $page = $category->slug;
 
             return view('frontend.category', compact(
-                'category', 'posts', 'page','middleIndexBanner'
+                'category', 'posts', 'page','middleIndexBanner', 'firstPosts'
             ))->with($this->generateMeta('category', [
                 'title' => ($category->seo_name) ?  $category->seo_name : $category->name,
                 'desc' =>  ($category->desc)? $category->desc : null,

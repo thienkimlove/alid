@@ -21,7 +21,7 @@
                     </div>
                 </div>
 
-                
+
                 @foreach ($videos as $video)
                     <article class="item">
                     <a class="thumb" href="{{url('video', $video->slug)}}" title="">

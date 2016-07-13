@@ -63,7 +63,7 @@
         </div>
     </div>
 </header>
-@if ($page == 'index')
+
 <section class="boxBanner">
     <div class="boxSlider">
         <div class="owl-carousel" id="slideHomepage">
@@ -77,4 +77,3 @@
         </div>
     </div>
 </section>
-@endif

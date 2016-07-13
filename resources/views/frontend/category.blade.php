@@ -11,8 +11,8 @@
                     </li>
                     <li class="active">{{$category->name}}</li>
                 </ul>
-                @if ($category->first_post->count() > 0)
-                    @foreach ($category->first_post as $firstPost)
+                @if ($firstPosts->count() > 0)
+                    @foreach ($firstPosts as $firstPost)
                       <div class="boxDetail">
                           <div class="topNews">
                             <p>
