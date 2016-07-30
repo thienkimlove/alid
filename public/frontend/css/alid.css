@@ -270,13 +270,9 @@ section, header, footer {
   margin-top: 10px;
 }
 
-#sideBar {
-  width: 300px;
-  position: absolute;
-}
-
-#sideBar.fixed {
+#sidebar.fixed {
   position: fixed;
+  width : 300px;
   top: 60px;
 }
 
@@ -662,6 +658,41 @@ section, header, footer {
 .viewDetail .viewMore:hover {
   color: #333;
 }
+/* //box-product */
+.box-product .owl-controls .owl-nav .owl-prev, .box-product .owl-controls .owl-nav .owl-next {
+  position: absolute;
+  top: -39px;
+  width: 26px;
+  height: 26px;
+  text-indent: -9090px;
+}
+.box-product .owl-controls .owl-nav .owl-prev {
+  background: url(../imgs/bg/pre.png) no-repeat;
+  background-color: none;
+  right: 30px;
+}
+.box-product .owl-controls .owl-nav .owl-prev:hover {
+  opacity: 0.5
+}
+.box-product .owl-controls .owl-nav .owl-next {
+  background: url(../imgs/bg/next.png) no-repeat;
+  background-color: none;
+  right: 2px;
+}
+.box-product .owl-controls .owl-nav .owl-next:hover {
+  opacity: 0.5
+}
+.box-product .item h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  min-height: 55px;
+}
+.box-product .item h3 a {
+  color: #333;
+  font-size: 13px;
+}
+
+
 
 .listButton {
   /* display: table; */
@@ -1614,7 +1645,7 @@ section, header, footer {
     margin-right: 20px;
   }
 
-  #sideBar.fixed, #sideBar {
+  #sidebar.fixed, #sidebar {
     position: relative !important;
     top: 0 !important;
   }

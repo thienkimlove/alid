@@ -1,4 +1,4 @@
-<div class="layoutRight">
+﻿<div class="layoutRight">
     <div class="boxAdv">
         <a href="{{url('lien-he')}}">
             <img src="{{url('frontend/imgs/temp/contact.jpg')}}" alt="">
@@ -43,7 +43,7 @@
         </div>
     </div>
     @if ($rightNews->count() > 0 && $page != 'phan-phoi' && $page != 'lien-he' && !($page == 'cau-hoi-thuong-gap' && isset($mainQuestion)))
-        <div class="boxNews" id="sideBar">
+        <div class="boxNews" id="sidebar">
             <h3 class="globalTitle">
                 Tin nổi bật
             </h3>
