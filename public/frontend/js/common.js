@@ -117,6 +117,32 @@
       }
     });
   };
+
+    var slideProduct = function(){
+        $('#slide-product').owlCarousel({
+            loop:true,
+            margin:20,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:true,
+                    dots: false
+                },
+                640:{
+                    items:2,
+                    nav:true,
+                    dots: false
+                },
+                1000:{
+                    items:3,
+                    nav:true,
+                    loop:true,
+                    dots: false
+                }
+            }
+        });
+    };
   /*equalHeight*/
    equalHeight($('.boxContact .itemLeft, .boxContact .itemRight'));
     function equalHeight(obj) {
@@ -131,5 +157,6 @@
     showMenuMobile();
     slideHomepage();
     slideHistory();
+      slideProduct();
   });
 })(jQuery);
