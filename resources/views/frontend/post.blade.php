@@ -57,6 +57,22 @@
                     </h3>
                     <div class="fb-comments" data-href="{{url($post->slug.'.html')}}" data-numposts="5"></div>
                 </div>
+
+                <div class="box-product">
+                    <h3 class="title">Bài liên quan</h3>
+                    <div class="owl-carousel" id="slide-product">
+                        @foreach ($latestNews as $rPost)
+                            <div class="item">
+                                <a href="{{url($rPost->slug.'.html')}}" title="">
+                                    <img src="{{url('img/cache/218x128/'.$rPost->image)}}" width="218" height="128" alt=""/>
+                                </a>
+                                <h3>
+                                    <a href="{{url($rPost->slug.'.html')}}" title="">{{$rPost->title}}</a>
+                                </h3>
+                            </div>
+                        @endforeach
+                    </div>
+                </div><!--//box-product-->
             </div>
            @include('frontend.right')
         </div>
