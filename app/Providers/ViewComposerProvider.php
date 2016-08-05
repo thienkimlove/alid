@@ -58,7 +58,7 @@ class ViewComposerProvider extends ServiceProvider
         view()->composer('frontend.right', function ($view) {
 
             $view->with('featureVideos',  Video::latest('updated_at')->limit(4)->get());
-            $view->with('rightNews',  Post::publish()->latest('updated_at')->limit(6)->get());
+            $view->with('rightNews',  Post::publish()->latest('updated_at')->limit(4)->get());
         });
     }
 
