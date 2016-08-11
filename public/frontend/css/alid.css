@@ -30,7 +30,6 @@ b {
 }
 
 strong {
-  display: block;
   line-height: 200%;
 }
 
@@ -630,7 +629,12 @@ section, header, footer {
 .boxDetail ul {
   padding-left: 25px;
 }
-
+.boxDetail table {
+  border: 2px solid;
+}
+.boxDetail table td {
+  padding: 10px;
+}
 .viewDetail {
   padding: 10px 0;
 }
