@@ -143,6 +143,18 @@
             }
         });
     };
+	var tabContent = function(){
+        $("a[data-type='tab']").on('click',function(e){
+            e.preventDefault();
+            var parent = $(this).data('parent');
+            var content = $(this).data('content');
+            var reset = $(this).data('reset');
+            $("." + parent + " li").removeClass('active');
+            $(this).parent("li").addClass('active');
+            $("."+reset).css({display:"none"});
+            $("#"+content).css({display:"block"});
+        });
+    };
   /*equalHeight*/
    equalHeight($('.boxContact .itemLeft, .boxContact .itemRight'));
     function equalHeight(obj) {
@@ -157,6 +169,7 @@
     showMenuMobile();
     slideHomepage();
     slideHistory();
-      slideProduct();
+    slideProduct();
+	tabContent();
   });
 })(jQuery);

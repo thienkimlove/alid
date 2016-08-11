@@ -635,6 +635,36 @@ section, header, footer {
 .boxDetail table td {
   padding: 10px;
 }
+/* //newStyle */
+.boxDetail .news-type {
+  list-style: none;
+  padding: 0;
+}
+.boxDetail .news-type.bgList {
+  background: #800080;
+  display: table;
+  width: 100%;
+}
+.boxDetail .news-type.bgList li {
+  display: table-cell;
+  float: none;
+  margin: 0;
+  text-align: center;
+}
+.boxDetail .news-type.bgList li a {
+  height: 26px;
+  color: #fff;
+  text-transform: uppercase;;
+}
+.boxDetail .news-type.bgList li.active a {
+  background: #b21c73;
+  color: #fff;
+  display: block;
+  padding: 10px;
+}
+/* //end */
+
+
 .viewDetail {
   padding: 10px 0;
 }
