@@ -1,8 +1,8 @@
-@extends('frontend')
+﻿@extends('frontend')
 
 @section('content')
 
-    <section class="layoutHome">
+    <section class="layoutHome contentDetail">
         <div class="container">
             <div class="layoutLeft">
                 <ul class="breadCrumb clearFix">
@@ -19,7 +19,7 @@
                         </li>
                         <li>
                             <a href="javascript:void(0)" rel="nofollow" data-type="tab" data-content="tab-research01" data-parent="news-type" data-reset="news-home" title="Nhận biết bao bì">
-                                Nhận biết bao bì</a>
+Bằng chứng khoa học</a>
                         </li>
                         <li>
                             <a href="javascript:void(0)" rel="nofollow" data-type="tab" data-content="tab-video" data-parent="news-type" data-reset="news-home" title="Hướng dẫn sử dụng">

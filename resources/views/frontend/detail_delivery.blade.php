@@ -1,8 +1,8 @@
-@extends('frontend')
+﻿@extends('frontend')
 
 @section('content')
 
-    <section class="layoutHome">
+    <section class="layoutHome contentDetail">
         <div class="container">
             <div class="layoutLeft">
                 <ul class="breadCrumb clearFix">
