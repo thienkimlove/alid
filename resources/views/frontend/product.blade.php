@@ -10,11 +10,39 @@
                     <li class="active">Sản phẩm</li>
                 </ul>
                 <div class="boxDetail">
-                    <h2 class="titlePost">
-                        {{$product->title}}
-                    </h2>
+                    <h2 class="titlePost">{{$product->title}}</h2>
 
-                    {!! $product->content_tab1 !!}
+                    <ul class="news-type bgList">
+                        <li class="active">
+                            <a href="javascript:void(0)" rel="nofollow" data-type="tab" data-content="tab-infoproduct" data-parent="news-type" data-reset="news-home" title="Thông tin sản phẩm">
+                                Thông tin sản phẩm</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" rel="nofollow" data-type="tab" data-content="tab-research01" data-parent="news-type" data-reset="news-home" title="Nhận biết bao bì">
+                                Nhận biết bao bì</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" rel="nofollow" data-type="tab" data-content="tab-video" data-parent="news-type" data-reset="news-home" title="Hướng dẫn sử dụng">
+                                Hướng dẫn sử dụng
+                            </a>
+                        </li>
+                    </ul><!--//news-type-->
+                    <div class="news-home" id="tab-infoproduct" style="display: block">
+                        <article class="detail">
+                            {!! $product->content_tab1 !!}
+                        </article>
+                    </div><!--//news-list-->
+                    <div class="news-home" id="tab-research01">
+                        <article class="detail">
+                            {!! $product->content_tab2 !!}
+                        </article>
+                    </div><!--//news-list-->
+                    <div class="news-home" id="tab-video">
+                        <article class="detail">
+                            {!! $product->content_tab3 !!}
+                        </article>
+                    </div><!--//news-list-->
+
                 </div>
                 <!-- //listButton -->
                 <ul class="listButton clearFix">

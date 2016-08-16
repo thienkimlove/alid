@@ -129,7 +129,7 @@ class FrontendController extends Controller
 
         $promos =  Post::where('index_slide', true)
             ->where('status', true)
-            ->latest('updated_at')
+            ->orderBy('id', 'asc')
             ->limit(4)
             ->get();
 
