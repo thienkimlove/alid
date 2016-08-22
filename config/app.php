@@ -163,6 +163,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Jenssegers\Agent\AgentServiceProvider::class,
 
     ],
 
@@ -215,6 +216,7 @@ return [
         'Image'     => Intervention\Image\Facades\Image::class,
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
+        'Agent'      => Jenssegers\Agent\Facades\Agent::class,
 
     ],
 
